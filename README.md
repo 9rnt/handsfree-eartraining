@@ -1,4 +1,4 @@
-# handsfree-eartraining.org
+# handsfree-eartraining
 
 ## Project setup
 ```
