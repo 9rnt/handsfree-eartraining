@@ -203,9 +203,7 @@ li.nav, .footer-link {
   position: fixed;
   width: 100%;
   max-width: 300px;
-  height: calc(100% - 70px);
-  bottom: 40px;
-  top:0;
+  bottom: 41px;
   right:0;
   background-color: black;
   li {
