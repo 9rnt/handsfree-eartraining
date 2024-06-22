@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
-  publicPath: process.env.NODE_ENV === 'production' ? '/handsfree-eartraining/' : '/',
+  publicPath: '/handsfree-eartraining/',
   transpileDependencies: true,
   chainWebpack: config => {
     config.module
