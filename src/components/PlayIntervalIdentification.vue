@@ -104,20 +104,7 @@ export default {
     }
   },
   methods: {
-    async getVoicesAsync() {
-      const synth = window.speechSynthesis;
-      return new Promise((resolve) => {
-        let voices = synth.getVoices();
-        if (voices.length > 0) {
-          resolve(voices);
-        } else {
-          synth.onvoiceschanged = () => {
-            voices = synth.getVoices();
-            resolve(voices);
-          };
-        }
-      });
-    },
+    
     async playAudio(src) {
       return new Promise((resolve, reject) => {
         if (!this.isPlaying) {
@@ -134,6 +121,20 @@ export default {
         } else {
           audio.play();
           this.currentAudios.push(audio);
+        }
+      });
+    },
+    async getVoicesAsync() {
+      const synth = window.speechSynthesis;
+      return new Promise((resolve) => {
+        let voices = synth.getVoices();
+        if (voices.length > 0) {
+          resolve(voices);
+        } else {
+          synth.onvoiceschanged = () => {
+            voices = synth.getVoices();
+            resolve(voices);
+          };
         }
       });
     },

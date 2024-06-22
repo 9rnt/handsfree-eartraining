@@ -85,15 +85,42 @@ export default {
         }
       });
     },
-    textToSpeech(text) {
+    async getVoicesAsync() {
+      const synth = window.speechSynthesis;
+      return new Promise((resolve) => {
+        let voices = synth.getVoices();
+        if (voices.length > 0) {
+          resolve(voices);
+        } else {
+          synth.onvoiceschanged = () => {
+            voices = synth.getVoices();
+            resolve(voices);
+          };
+        }
+      });
+    },
+    async textToSpeech(text) {
       if (!this.isPlaying) {
         return;
       }
 
       const synth = window.speechSynthesis;
-      let voices = synth.getVoices();
+      const voices = await this.getVoicesAsync();
       let utterance = new SpeechSynthesisUtterance(text);
-      utterance.voice = voices[14];
+
+      // Attempt to find a male voice with a preference for en-GB locale
+      const maleVoice = voices.find(voice => voice.lang.startsWith('en-GB'));// Use pop() to get the last voice in the filtered array
+      
+      if (maleVoice) {
+        utterance.voice = maleVoice;
+      } else {
+        // Fallback to any es-US voice if no male voice is found
+        const fallbackVoice = voices.find(voice => voice.lang.startsWith('es-US'));
+        if (fallbackVoice) {
+          utterance.voice = fallbackVoice;
+        }
+      }
+
       synth.speak(utterance);
     },
     stopAudio() {

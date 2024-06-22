@@ -112,6 +112,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 100%;
+  max-height: 35px;
   color: rgb(5, 0, 0);
   text-align: center;
   border-color: black;
@@ -157,11 +159,12 @@ li.nav, .footer-link {
 }
 
 .brand {
-  display: flex;
+  position: absolute;
+  left: 30px;
   img {
     width: 30px;
     height: 30px;
-
+    margin-bottom: 1px;
     transition: .5s ease all;
   }
 }
@@ -190,6 +193,7 @@ li.nav, .footer-link {
   color: inherit;
   font: inherit;
   font-weight: bold;
+  font-size: 1.5em;
   cursor: pointer;
   transition: .5s ease all;
 }
@@ -199,10 +203,11 @@ li.nav, .footer-link {
   position: fixed;
   width: 100%;
   max-width: 300px;
-  height: 100%;
-  background-color: black;
+  height: calc(100% - 70px);
+  bottom: 40px;
   top:0;
-  left:0;
+  right:0;
+  background-color: black;
   li {
     margin-left: 0;
     margin-top: 4%;
