@@ -1,6 +1,6 @@
 # Handsfree Ear Training
 
-![Handsfree Ear Training Logo](src/assets/logo.png)
+<img src="src/assets/logo.png" alt="Handsfree Ear Training Logo" width="200"/>
 
 Welcome to Handsfree Ear Training, a Vue.js web application designed for musicians and music enthusiasts to practice ear training and music theory exercises hands-free. This innovative platform allows users to engage in ear training exercises without the need to constantly interact with their device, making it perfect for practicing while on the move.
 
