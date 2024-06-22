@@ -19,7 +19,7 @@ To get started with Handsfree Ear Training, follow these simple steps:
 
 1. **Clone the repository:** Run the following command in your terminal:
     ```
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/9rnt/handsfree-eartraining.git
     ```
 
 2. **Install dependencies:** Navigate to the project directory and install the necessary dependencies by running the following command:

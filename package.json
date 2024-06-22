@@ -2,9 +2,11 @@
   "name": "handsfree-eartraining",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://9rnt.github.io/handsfree-eartraining",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -22,7 +24,8 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "file-loader": "^6.2.0"
+    "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1"
   },
   "eslintConfig": {
     "root": true,
