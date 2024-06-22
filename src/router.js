@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import IntervalIdentification from './components/IntervalIdentification.vue'
 import ModeIdentification from './components/ModeIdentification.vue'
@@ -10,7 +10,7 @@ import PlayChordIdentification from './components/PlayChordIdentification.vue'
 import ContactMe from './components/ContactMe.vue'
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
