@@ -1,24 +1,22 @@
-# handsfree-eartraining
+# Handsfree Ear Training
 
-## Project setup
-```
-npm install
-```
+![Handsfree Ear Training Logo](link-to-your-logo.png)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Handsfree Ear Training is a web application dedicated to ear training and music theory exercises. The exercises are designed to be used hands-free, allowing you to practice while exercising or walking.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Features
 
-### Lints and fixes files
-```
-npm run lint
-```
+- **Intervals Identification:** Customize training sessions to identify random intervals.
+- **Modes Identification:** Identify random modes during timed training sessions.
+- **Chords Identification:** Practice identifying random chords within specified time intervals.
+- **Chord Progression Identification:** Recognize random chord progressions during training sessions.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Getting Started
+
+To run the application locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
