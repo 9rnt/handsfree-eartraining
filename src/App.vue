@@ -8,7 +8,7 @@
     <footer :class="{'scrolled-nav':scrolledPosition}">
       <div class="nav-container">
         <div class="brand">
-          <router-link to="/">
+          <router-link @click="mobileOff" to="/">
             <img src="@/assets/logo.png" alt="Logo" class="logo">
           </router-link>
         </div>
@@ -148,7 +148,7 @@ ul.dropdown-nav, .link {
 
 li.nav, .footer-link {
   padding: 1%;
-  transition: .5s ease all;
+  transition: .3s ease all;
   padding-bottom: 4px;
   border-bottom:1px solid transparent;
   &:hover {
@@ -165,7 +165,7 @@ li.nav, .footer-link {
     width: 30px;
     height: 30px;
     margin-bottom: 1px;
-    transition: .5s ease all;
+    transition: .3s ease all;
   }
 }
 .nav-container {
@@ -195,7 +195,7 @@ li.nav, .footer-link {
   font-weight: bold;
   font-size: 1.5em;
   cursor: pointer;
-  transition: .5s ease all;
+  transition: .3s ease all;
 }
 .dropdown-nav {
   display: flex;
